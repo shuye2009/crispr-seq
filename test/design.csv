@@ -1,0 +1,4 @@
+sort1   ./test/Greenblatt_CPEB2_Sort_1_S1_R1_001.fastq.gz
+sort2   ./test/Greenblatt_CPEB2_Sort_2_S2_R1_001.fastq.gz
+sort3   ./test/Greenblatt_CPEB2_Sort_3_S3_R1_001.fastq.gz
+sort4   ./test/Greenblatt_CPEB2_Sort_4_S4_R1_001.fastq.gz

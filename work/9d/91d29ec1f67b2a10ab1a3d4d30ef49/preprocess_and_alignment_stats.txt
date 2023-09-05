@@ -1,0 +1,27 @@
+
+**** Greenblatt_CPEB2_Sort_2_S2_R1 ****
++
+AAAAAEEEEEEEEEEEEEEEEEEEEE/EEE
+@NB501055:76:H7YJVBGXC:1:11101:4419:3248 1:N:0:TCCGGAGA+GCCTCTAT
+GGAGCCAGGAGGAGAGCCCACGTTTAGAGC
++
+AAAAAEEEEEEEEEEEEEEEEEEEEEEEEE
+position	count
+0	127
+1	848
+2	16
+
+full anchor 127; vector 0; both 864
+unmatched 9
+match rate 99.1
+finish
+guide	count
+18	5
+19	20
+20	965
+21	1
+# reads processed: 991
+# reads with at least one reported alignment: 935 (94.35%)
+# reads that failed to align: 51 (5.15%)
+# reads with alignments suppressed due to -m: 5 (0.50%)
+Reported 935 alignments

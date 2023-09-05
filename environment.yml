@@ -1,0 +1,13 @@
+name: crispr
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconda::fastqc>=0.12.1
+  - bioconda::bowtie>=1.2.3
+  - conda-forge::perl>=5.26.3
+  - conda-forge::r-base>=4.2.0
+  - bioconda::bioconductor-deseq2>=1.38.0
+  - conda-forge::r-ggplot2>=3.1.0
+  - conda-forge::python>=3.8.0

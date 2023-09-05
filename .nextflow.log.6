@@ -1,0 +1,102 @@
+Aug-31 12:20:13.964 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile test, conda --saveIntermediates true -resume
+Aug-31 12:20:14.195 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.04.3
+Aug-31 12:20:14.229 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/shuye/.nextflow/plugins; core-plugins: nf-amazon@1.16.2,nf-azure@1.0.1,nf-codecommit@0.1.4,nf-console@1.0.5,nf-ga4gh@1.0.5,nf-google@1.7.3,nf-tower@1.5.12,nf-wave@0.8.4
+Aug-31 12:20:14.248 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-31 12:20:14.286 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-31 12:20:14.290 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-31 12:20:14.322 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-31 12:20:14.353 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /mnt/c/RSYNC/Repositories/crispr-seq/nextflow.config
+Aug-31 12:20:14.355 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/c/RSYNC/Repositories/crispr-seq/nextflow.config
+Aug-31 12:20:14.401 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,`
+Aug-31 12:20:16.230 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [path, cluster, test, multipath, multiconda, conda, singularity, docker]
+Aug-31 12:20:16.292 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-31 12:20:16.316 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [adoring_becquerel] DSL2 - revision: 9cc7287213
+Aug-31 12:20:16.317 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-31 12:20:16.318 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Aug-31 12:20:16.331 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/shuye/.nextflow/secrets/store.json
+Aug-31 12:20:16.336 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@61cda923] - activable => nextflow.secret.LocalSecretsProvider@61cda923
+Aug-31 12:20:16.425 [main] DEBUG nextflow.Session - Session UUID: ac937df2-e566-4d6c-b863-80ef55ab9f6e
+Aug-31 12:20:16.426 [main] DEBUG nextflow.Session - Run name: adoring_becquerel
+Aug-31 12:20:16.428 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-31 12:20:16.442 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Aug-31 12:20:16.500 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.04.3 build 5875
+  Created: 11-08-2023 18:37 UTC (14:37 EDT)
+  System: Linux 5.15.90.1-microsoft-standard-WSL2
+  Runtime: Groovy 3.0.16 on OpenJDK 64-Bit Server VM 11.0.13+7-b1751.21
+  Encoding: UTF-8 (UTF-8)
+  Process: 173506@Shuye-PC [127.0.1.1]
+  CPUs: 8 - Mem: 7.7 GB (5.5 GB) - Swap: 2 GB (2 GB)
+Aug-31 12:20:16.600 [main] DEBUG nextflow.Session - Work-dir: /mnt/c/RSYNC/Repositories/crispr-seq/work [v9fs]
+Aug-31 12:20:16.645 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-31 12:20:16.658 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-31 12:20:16.730 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-31 12:20:16.743 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Aug-31 12:20:16.947 [main] DEBUG nextflow.Session - Session start
+Aug-31 12:20:16.953 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /mnt/c/RSYNC/Repositories/crispr-seq/results/summary/trace/trace.txt
+Aug-31 12:20:16.979 [main] DEBUG nextflow.Session - Using default localLib path: /mnt/c/RSYNC/Repositories/crispr-seq/lib
+Aug-31 12:20:17.010 [main] DEBUG nextflow.Session - Adding to the classpath library: /mnt/c/RSYNC/Repositories/crispr-seq/lib
+Aug-31 12:20:17.924 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-31 12:20:20.854 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:medCpu` matches labels `fastqc,medCpu,lowMem` for process with name fastqc
+Aug-31 12:20:20.856 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:lowMem` matches labels `fastqc,medCpu,lowMem` for process with name fastqc
+Aug-31 12:20:20.858 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process fastqc
+Aug-31 12:20:20.870 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-31 12:20:20.872 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-31 12:20:20.884 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-31 12:20:20.892 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=7.7 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Aug-31 12:20:21.002 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-31 12:20:21.002 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-31 12:20:21.014 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-31 12:20:21.015 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-31 12:20:21.030 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-31 12:20:21.031 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-31 12:20:21.038 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-31 12:20:21.038 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-31 12:20:21.044 [main] DEBUG nextflow.Session - Session aborted -- Cause: No such property: sort for class: nextflow.script.WorkflowBinding
+Aug-31 12:20:21.072 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] collect
+  [operator] collect
+  [operator] collect
+  [operator] map
+  [operator] collect
+  [operator] mix
+  [operator] mix
+
+Aug-31 12:20:21.091 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: No such property: sort for class: nextflow.script.WorkflowBinding
+	at groovy.lang.Binding.getVariable(Binding.java:61)
+	at nextflow.script.WorkflowBinding.getVariable(WorkflowBinding.groovy:140)
+	at groovy.lang.Binding.getProperty(Binding.java:116)
+	at nextflow.script.WorkflowBinding.getProperty(WorkflowBinding.groovy:129)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:190)
+	at groovy.lang.Closure.getPropertyTryThese(Closure.java:320)
+	at groovy.lang.Closure.getPropertyDelegateFirst(Closure.java:310)
+	at groovy.lang.Closure.getProperty(Closure.java:296)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:341)
+	at Script_f957484a$_runScript_closure2$_closure3.doCall(Script_f957484a:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.IterableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:183)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:229)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:224)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:130)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:368)
+	at nextflow.cli.Launcher.run(Launcher.groovy:494)
+	at nextflow.cli.Launcher.main(Launcher.groovy:653)
