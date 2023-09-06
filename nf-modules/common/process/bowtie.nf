@@ -4,7 +4,7 @@
 
 process bowtie{
     label 'bowtie'
-    publishDir "$launchDir/results"
+    publishDir "$launchDir/results", mode: 'copy'
     
     input:
     tuple val(bf), path(processedReads)
