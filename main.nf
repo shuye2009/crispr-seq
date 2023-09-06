@@ -41,7 +41,9 @@ chDesignFile  = params.design       ? Channel.fromPath(params.design, checkIfExi
 
 // Load raw reads
 
-chRawReads = Channel.fromPath(params.reads).map { file -> tuple(file.simpleName, file) }
+chRawReads = Channel.fromPath(params.reads)
+                    .map { file -> tuple(file.simpleName, file) }
+                    .view {prefix, fileName -> "$prefix: $fileName"}
 
 // Make samplePlan if not available
 //chSplan = NFTools.getSamplePlan(params.samplePlan, params.reads, params.readPaths, params.singleEnd)
