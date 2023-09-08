@@ -1,1 +1,0 @@
-/mnt/c/RSYNC/Repositories/crispr-seq/assets/TKO/TKOv2.1-Human-Library.txt
