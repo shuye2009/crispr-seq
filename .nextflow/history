@@ -124,3 +124,4 @@
 2023-08-31 12:29:06	5m 53s	determined_hoover	ERR	1f7f2c005c3bf3d94f3c6ea8718daf51	ac937df2-e566-4d6c-b863-80ef55ab9f6e	nextflow run main.nf -profile test,conda --saveIntermediates true -resume
 2023-08-31 13:15:46	9m 52s	nasty_brown	OK	1f7f2c005c3bf3d94f3c6ea8718daf51	fe3a5bf4-f5a4-4cd7-a6fd-aa08ef4caa38	nextflow run main.nf -profile test,conda --saveIntermediates true
 2023-08-31 13:27:41	1m 10s	sick_wiles	OK	1f7f2c005c3bf3d94f3c6ea8718daf51	fe3a5bf4-f5a4-4cd7-a6fd-aa08ef4caa38	nextflow run main.nf -profile test,conda --saveIntermediates false -resume
+2023-09-06 17:42:58	1m 37s	astonishing_mestorf	OK	bfd936baa6c07d1b63822e5fb8f35e35	fe3a5bf4-f5a4-4cd7-a6fd-aa08ef4caa38	nextflow run main.nf -profile test,conda --saveIntermediates false -resume

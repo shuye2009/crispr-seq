@@ -1,33 +1,5 @@
 
-**** Greenblatt_CPEB2_Sort_2_S2_R1 ****
-+
-AAAAAEEEEEEEEEEEEEEEEEEEEE/EEE
-@NB501055:76:H7YJVBGXC:1:11101:4419:3248 1:N:0:TCCGGAGA+GCCTCTAT
-GGAGCCAGGAGGAGAGCCCACGTTTAGAGC
-+
-AAAAAEEEEEEEEEEEEEEEEEEEEEEEEE
-position	count
-0	127
-1	848
-2	16
-
-full anchor 127; vector 0; both 864
-unmatched 9
-match rate 99.1
-finish
-guide	count
-18	5
-19	20
-20	965
-21	1
-Setting the index via positional argument will be deprecated in a future release. Please use -x option instead.
-# reads processed: 991
-# reads with at least one alignment: 940 (94.85%)
-# reads that failed to align: 51 (5.15%)
-# reads with alignments suppressed due to -m: 5 (0.50%)
-Reported 935 alignments
-
-**** Greenblatt_CPEB2_Sort_1_S1_R1 ****
+**** Greenblatt_CPEB2_Sort_4_S4_R1 ****
 +
 /A/AA/EEE</EEAE<EEAEEAEEEE//</
 @NB501055:76:H7YJVBGXC:1:11101:3954:2273 1:N:0:CGCTCATT+AGGATAGG
@@ -49,13 +21,41 @@ guide	count
 19	6
 20	992
 Setting the index via positional argument will be deprecated in a future release. Please use -x option instead.
-# reads processed: 983
-# reads with at least one alignment: 953 (96.95%)
-# reads that failed to align: 30 (3.05%)
-# reads with alignments suppressed due to -m: 2 (0.20%)
-Reported 951 alignments
+# reads processed: 995
+# reads with at least one alignment: 941 (94.57%)
+# reads that failed to align: 54 (5.43%)
+# reads with alignments suppressed due to -m: 5 (0.50%)
+Reported 936 alignments
 
 **** Greenblatt_CPEB2_Sort_3_S3_R1 ****
++
+AAAAAEEEEEEEEEEEEEEEEEEEEE/EEE
+@NB501055:76:H7YJVBGXC:1:11101:4419:3248 1:N:0:TCCGGAGA+GCCTCTAT
+GGAGCCAGGAGGAGAGCCCACGTTTAGAGC
++
+AAAAAEEEEEEEEEEEEEEEEEEEEEEEEE
+position	count
+0	127
+1	848
+2	16
+
+full anchor 127; vector 0; both 864
+unmatched 9
+match rate 99.1
+finish
+guide	count
+18	5
+19	20
+20	965
+21	1
+Setting the index via positional argument will be deprecated in a future release. Please use -x option instead.
+# reads processed: 998
+# reads with at least one alignment: 950 (95.19%)
+# reads that failed to align: 48 (4.81%)
+# reads with alignments suppressed due to -m: 4 (0.40%)
+Reported 946 alignments
+
+**** Greenblatt_CPEB2_Sort_2_S2_R1 ****
 +
 AAAAAEEEEAEEEEEEEEEEEEEEEEEEEE
 @NB501055:76:H7YJVBGXC:1:11101:4276:3888 1:N:0:GAGATTCC+TCAGAGCC
@@ -77,13 +77,13 @@ guide	count
 19	2
 20	993
 Setting the index via positional argument will be deprecated in a future release. Please use -x option instead.
-# reads processed: 998
-# reads with at least one alignment: 950 (95.19%)
-# reads that failed to align: 48 (4.81%)
-# reads with alignments suppressed due to -m: 4 (0.40%)
-Reported 946 alignments
+# reads processed: 991
+# reads with at least one alignment: 940 (94.85%)
+# reads that failed to align: 51 (5.15%)
+# reads with alignments suppressed due to -m: 5 (0.50%)
+Reported 935 alignments
 
-**** Greenblatt_CPEB2_Sort_4_S4_R1 ****
+**** Greenblatt_CPEB2_Sort_1_S1_R1 ****
 @NB501055:76:H7YJVBGXC:1:11101:12739:3012 1:N:0:ATTACTCG+AGGCTATA
 CACCGAAGGGCACAATTGCAGAGGGGT
 +
@@ -105,8 +105,8 @@ guide	count
 19	46
 20	928
 Setting the index via positional argument will be deprecated in a future release. Please use -x option instead.
-# reads processed: 995
-# reads with at least one alignment: 941 (94.57%)
-# reads that failed to align: 54 (5.43%)
-# reads with alignments suppressed due to -m: 5 (0.50%)
-Reported 936 alignments
+# reads processed: 983
+# reads with at least one alignment: 953 (96.95%)
+# reads that failed to align: 30 (3.05%)
+# reads with alignments suppressed due to -m: 2 (0.20%)
+Reported 951 alignments

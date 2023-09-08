@@ -1,20 +1,15 @@
 #!/usr/bin/env nextflow
 
 /*
-Copyright Institut Curie 2020-2021
-This software is a computer program whose purpose is to analyze high-throughput sequencing data.
-You can use, modify and/ or redistribute the software under the terms of license (see the LICENSE file for more details).
-The software is distributed in the hope that it will be useful, but "AS IS" WITHOUT ANY WARRANTY OF ANY KIND.
-Users are therefore encouraged to test the software's suitability as regards their requirements in conditions enabling the security of their systems and/or data.
-The fact that you are presently reading this means that you have had knowledge of the license and that you accept its terms.
+License issues
 */
 
 /*
 ========================================================================================
-                                ChIP-seq DSL2
+                                CRISPR-seq DSL2
 ========================================================================================
- ChIP-seq Analysis Pipeline.
- https://gitlab.curie.fr/data-analysis/chip-seq
+ CRISPR-seq Analysis Pipeline.
+ https://github.com/shuye2009/crispr-seq
 ----------------------------------------------------------------------------------------
 */
 
@@ -128,6 +123,8 @@ workflow {
       chRawReads
     )
   }
+
+  chVersions | collectFile (storeDir: "$launchDir/results")
 }
   
 
