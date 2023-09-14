@@ -69,52 +69,57 @@ include { outputDocumentation } from './nf-modules/common/process/utils/outputDo
 //include { multiqc }             from './nf-modules/local/process/multiqc'
 
 workflow {
-  chVersions = Channel.empty()
+  if(params.saveIntermediates){
+    chVersions = Channel.empty()
 
-  //*******************************************
-  // PROCESS: fastqc
-  if(!params.skipFastqc){
-    fastqc (
-      chSingleEnd, chRawReads
+    //*******************************************
+    // PROCESS: fastqc
+    if(!params.skipFastqc){
+      fastqc (
+        chSingleEnd, chRawReads
+      )
+    }
+    
+    chFastqcMqc = fastqc.out.results.collect()
+    chVersions = chVersions.mix(fastqc.out.versions)
+    //chVersions.view {"fastqc version", $it}
+
+    //*******************************************
+    // TRIMMING STAGGER AND ADAPTOR
+    trimBothEnds (
+      chRawReads
     )
-  }
+
+    chProcessedReads = trimBothEnds.out.preProcessed
+
+    //*******************************************
+    // ALIGN TO TKO
+    bowtie (
+      chProcessedReads
+    )
+
+    chCounts = bowtie.out.readCount
+    chVersions = chVersions.mix(bowtie.out.versions)
+
+    //*******************************************
+    // COUNT ALIGNED READS PER GENE PER GUIDE
+    readCounts (
+      chCounts, chGuideLib
+    )
+
+    //*******************************************
+    // GET INPUT FASTQ SIZE
+    readStats (chRawReads) | collectFile (storeDir: "$launchDir/results")
+
+    //*******************************************
+    // COLLECT ALIGNMENT STATS
   
-  chFastqcMqc = fastqc.out.results.collect()
-  chVersions = chVersions.mix(fastqc.out.versions)
-  //chVersions.view {"fastqc version", $it}
+    chUnmatched = trimBothEnds.out.unMatched
+    chBowtieLog = bowtie.out.bowtieLog
+    alignStats (chUnmatched, chBowtieLog) | collectFile (storeDir: "$launchDir/results")
 
-  //*******************************************
-  // TRIMMING STAGGER AND ADAPTOR
-  trimBothEnds (
-    chRawReads
-  )
-
-  chProcessedReads = trimBothEnds.out.preProcessed
-
-  //*******************************************
-  // ALIGN TO TKO
-  bowtie (
-    chProcessedReads
-  )
-
-  chCounts = bowtie.out.readCount
-  chVersions = chVersions.mix(bowtie.out.versions)
-
-  //*******************************************
-  // COUNT ALIGNED READS PER GENE PER GUIDE
-  readCounts (
-    chCounts, chGuideLib
-  )
-
-  //*******************************************
-  // GET INPUT FASTQ SIZE
-  readStats (chRawReads) | collectFile (storeDir: "$launchDir/results")
-
-  //*******************************************
-  // COLLECT ALIGNMENT STATS
-  chUnmatched = trimBothEnds.out.unMatched
-  chBowtieLog = bowtie.out.bowtieLog
-  alignStats (chUnmatched, chBowtieLog) | collectFile (storeDir: "$launchDir/results")
+    chVersions | collectFile (storeDir: "$launchDir/results")
+  }
 
   //*******************************************
   // CLEANUP
@@ -123,8 +128,6 @@ workflow {
       chRawReads
     )
   }
-
-  chVersions | collectFile (storeDir: "$launchDir/results")
 }
   
 
