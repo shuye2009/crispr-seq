@@ -55,7 +55,7 @@ chRawReads = Channel.fromPath(params.reads)
 // Workflows
 
 // Processes
-include { checkDesign } from './nf-modules/local/process/checkDesign'
+
 include { fastqc }      from './nf-modules/common/process/fastqc'
 include { trimBothEnds }  from './nf-modules/common/process/trimBothEnds'
 include { bowtie }      from './nf-modules/common/process/bowtie'
@@ -64,9 +64,6 @@ include { readStats }       from './nf-modules/common/process/readStats'
 include { alignStats }       from './nf-modules/common/process/alignStats'
 include { cleanup }       from './nf-modules/common/process/cleanup'
 
-include { getSoftwareVersions } from './nf-modules/common/process/utils/getSoftwareVersions'
-include { outputDocumentation } from './nf-modules/common/process/utils/outputDocumentation'
-//include { multiqc }             from './nf-modules/local/process/multiqc'
 
 workflow {
   if(params.saveIntermediates){
