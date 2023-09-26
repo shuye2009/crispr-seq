@@ -10,6 +10,7 @@
 #
 # Date:  Sept 22, 2016
 # Author:  Kevin R Brown
+# Adapted: Shuye Pu
 #
 # INPUT:  FASTQ filename to parse
 # OUTPUT:  Filtered FASTQ, Unmatched reads FASTQ
