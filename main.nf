@@ -69,7 +69,7 @@ include { outputDocumentation } from './nf-modules/common/process/utils/outputDo
 //include { multiqc }             from './nf-modules/local/process/multiqc'
 
 workflow {
-  if(params.saveIntermediates){
+  if(!params.tidyup){
     chVersions = Channel.empty()
 
     //*******************************************
@@ -107,10 +107,7 @@ workflow {
       chCounts, chGuideLib
     )
 
-    //*******************************************
-    // GET INPUT FASTQ SIZE
-    readStats (chRawReads) | collectFile (storeDir: "$launchDir/results")
-
+  
     //*******************************************
     // COLLECT ALIGNMENT STATS
   
@@ -123,10 +120,15 @@ workflow {
 
   //*******************************************
   // CLEANUP
-  if(!params.saveIntermediates){
+  if(params.tidyup){
+
     cleanup (
       chRawReads
     )
+    //*******************************************
+    // GET INPUT FASTQ SIZE
+    readStats (chRawReads) | collectFile (storeDir: "$launchDir/results")
+
   }
 }
   

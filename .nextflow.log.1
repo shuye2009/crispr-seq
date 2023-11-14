@@ -1,0 +1,68 @@
+Nov-14 12:12:59.444 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Nov-14 12:12:59.573 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.04.3
+Nov-14 12:12:59.609 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/greenblattlab/shuyepu/.nextflow/plugins; core-plugins: nf-amazon@1.16.2,nf-azure@1.0.1,nf-codecommit@0.1.4,nf-console@1.0.5,nf-ga4gh@1.0.5,nf-google@1.7.3,nf-tower@1.5.12,nf-wave@0.8.4
+Nov-14 12:12:59.644 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-14 12:12:59.646 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-14 12:12:59.662 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-14 12:12:59.685 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-14 12:12:59.721 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/greenblattlab/shuyepu/crispr-seq/nextflow.config
+Nov-14 12:12:59.722 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/greenblattlab/shuyepu/crispr-seq/nextflow.config
+Nov-14 12:12:59.758 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Nov-14 12:13:01.928 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Nov-14 12:13:02.089 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [dreamy_jennings] DSL2 - revision: 8c8ffd77cc
+Nov-14 12:13:02.090 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-14 12:13:02.100 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-14 12:13:02.115 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /home/greenblattlab/shuyepu/.nextflow/secrets/store.json
+Nov-14 12:13:02.120 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@f9cab00] - activable => nextflow.secret.LocalSecretsProvider@f9cab00
+Nov-14 12:13:02.229 [main] DEBUG nextflow.Session - Session UUID: d09a317f-ecf1-4961-8ee9-78d0e9a41c88
+Nov-14 12:13:02.230 [main] DEBUG nextflow.Session - Run name: dreamy_jennings
+Nov-14 12:13:02.240 [main] DEBUG nextflow.Session - Executor pool size: 24
+Nov-14 12:13:02.265 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-14 12:13:02.479 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.04.3 build 5875
+  Created: 11-08-2023 18:37 UTC (14:37 EDT)
+  System: Linux 4.18.0-425.10.1.el8_7.x86_64
+  Runtime: Groovy 3.0.16 on Java HotSpot(TM) 64-Bit Server VM 17.0.6+9-LTS-190
+  Encoding: UTF-8 (UTF-8)
+  Process: 2102294@rc01.ccbr.utoronto.ca [192.168.233.71]
+  CPUs: 24 - Mem: 47.1 GB (13.4 GB) - Swap: 23.6 GB (22.2 GB)
+Nov-14 12:13:02.656 [main] DEBUG nextflow.Session - Work-dir: /home/greenblattlab/shuyepu/crispr-seq/work [nfs]
+Nov-14 12:13:02.681 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-14 12:13:02.694 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-14 12:13:02.778 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-14 12:13:02.813 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 25; maxThreads: 1000
+Nov-14 12:13:03.173 [main] DEBUG nextflow.Session - Session start
+Nov-14 12:13:03.180 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/greenblattlab/shuyepu/crispr-seq/results/summary/trace/trace.txt
+Nov-14 12:13:03.227 [main] DEBUG nextflow.Session - Using default localLib path: /home/greenblattlab/shuyepu/crispr-seq/lib
+Nov-14 12:13:03.231 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/greenblattlab/shuyepu/crispr-seq/lib
+Nov-14 12:13:03.609 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-14 12:13:03.761 [main] DEBUG nextflow.Session - Session aborted -- Cause: Missing `fromPath` parameter
+Nov-14 12:13:03.791 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] collect
+  [operator] collect
+
+Nov-14 12:13:03.802 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Missing `fromPath` parameter
+	at nextflow.Channel.fromPath(Channel.groovy:285)
+	at nextflow.Channel.fromPath(Channel.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1519)
+	at groovy.lang.DelegatingMetaClass.invokeStaticMethod(DelegatingMetaClass.java:154)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaClassSite.call(StaticMetaClassSite.java:50)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_172fc05c.runScript(Script_172fc05c:39)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:145)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:229)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:224)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:130)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:368)
+	at nextflow.cli.Launcher.run(Launcher.groovy:494)
+	at nextflow.cli.Launcher.main(Launcher.groovy:653)

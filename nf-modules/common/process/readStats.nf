@@ -14,7 +14,7 @@
     script:
     """
     count=\$(zcat $reads |grep "@" | wc -l)
-	echo -e "$bf\t\${count}" > fastq_raw_reads_count.tab
+	echo -e "$bf\t\$count" > fastq_raw_reads_count.tab
 
     """
  }
