@@ -23,9 +23,6 @@ nextflow.enable.dsl=2
 
 chSingleEnd   = Channel.value(params.singleEnd) 
 chGuideLib    = params.guideLib     ? Channel.fromPath(params.guideLib, checkIfExists: true).collect()    : Channel.empty()
-chMetadata    = params.metadata     ? Channel.fromPath(params.metadata, checkIfExists: true).collect()    : Channel.empty()
-chDesignFile  = params.design       ? Channel.fromPath(params.design, checkIfExists: true).collect()      : Channel.empty()
-
 
 
 /*
