@@ -58,7 +58,7 @@ while (my $line = <IN>) {
       my $gene = $parts[1];
       my $sequence = $guide_sequence{$guide};
  
-      print OUT "$sequence\t$gene\t$count\n";
+      print OUT "$guide\t$gene\t$count\n";
 
       #print "$gene\n";
       $gene_guide_count{$gene}{$guide} = $count;
