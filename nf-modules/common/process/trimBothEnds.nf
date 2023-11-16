@@ -4,6 +4,9 @@ trimming stagger from the 5' end and adaptor from the 3' end of the reads
 
 process trimBothEnds{
     label 'perl'
+    label 'medCpu'
+    label 'medMem'
+
     publishDir "$launchDir/results", mode: 'copy'
     
     input:

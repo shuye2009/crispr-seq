@@ -150,11 +150,11 @@ sub searchAtBothEnds {
    #start with sub-vector length 1 and full anchor, end with full vector, and sub-anchor length 6, 
    #allow guide length to go from 18 (two deletion) to 21 (one insertion)
    #allow vector starts at 1 only
-   my $min_anchor = 3;
+   my $min_anchor = 1;
    my $best_diff = 100;  ## best_diff should be 0, as the real guide length is 20
    my $best = [-1, -1];
    for (my $len_subv=length($vector);$len_subv>=0;$len_subv--) {
-   	for (my $len_guide=21;$len_guide>=18;$len_guide--) {
+   	for (my $len_guide=20;$len_guide>=18;$len_guide--) {
 		#for (my $offset=0; $offset<=0; $offset++){ #allow zero random nt at the start of read, tried with one, but did not work well
   			 
 	     	my $len_suba = length($read)-$len_subv-$len_guide;

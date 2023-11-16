@@ -6,7 +6,7 @@ process fastqc {
   
   label 'fastqc'
   label 'medCpu'
-  label 'lowMem'
+  label 'medMem'
 
   publishDir "$launchDir/results", mode: 'copy'
 

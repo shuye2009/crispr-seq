@@ -35,7 +35,7 @@ chGuideLib    = params.guideLib     ? Channel.fromPath(params.guideLib, checkIfE
 
 chRawReads = Channel.fromPath(params.reads)
                     .map { file -> tuple(file.simpleName, file) }
-                    .view {prefix, fileName -> "$prefix: $fileName"}
+                    //.view {prefix, fileName -> "$prefix: $fileName"}
 
 // Make samplePlan if not available
 //chSplan = NFTools.getSamplePlan(params.samplePlan, params.reads, params.readPaths, params.singleEnd)

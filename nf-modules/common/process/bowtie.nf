@@ -4,6 +4,9 @@
 
 process bowtie{
     label 'bowtie'
+    label 'medCpu'
+    label 'medMem'
+    
     publishDir "$launchDir/results", mode: 'copy'
     
     input:
